@@ -1,4 +1,4 @@
-# project-impex
+# Auto ImpEx 2.0
 
 > This is a Vue + Webpack project and it's target to auto generation Hybris impex script.
 
