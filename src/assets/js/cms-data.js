@@ -260,7 +260,7 @@ export default {
             }).join(";");
     
             exportList.Headers[component.type] = {
-                script: `INSERT_UPDATE ${component.type};$contentCV[unique=true];${header}`
+                script: `INSERT_UPDATE ${component.type};$contentCV[unique=true];uid[unique=true];name;${header}`
             }
             exportList.Components[component.type] = _ => {
                 return JSON.parse(JSON.stringify(component));
