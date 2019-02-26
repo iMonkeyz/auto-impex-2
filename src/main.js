@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import CmsData from '@/assets/js/cms-data.js'
 import axios from "axios";
 import prd from '@/assets/js/prd.js'
+import '@/assets/js/jquery.toaster.js'
 
 Vue.config.productionTip = false
 
