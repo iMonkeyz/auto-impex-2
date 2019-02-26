@@ -83,7 +83,7 @@ export default {
 
 <style>
 body {
-  font-family: consolas;
+  font-family: consolas !important;
 }
 .btn:focus,
 .btn:active:focus,

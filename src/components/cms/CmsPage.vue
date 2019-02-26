@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-6">
                     <p class="input-group input-group-sm">
-                        <input type="text" class="form-control" placeholder="页面包含的 Slot / Position 名称" v-model.trim="slotId">
+                        <input type="text" class="form-control" placeholder="页面包含的 Slot / Position 名称" v-model.trim="slotId" @input="filterWhiteSpace" @blur="filterWhiteSpace" @keyup="filterWhiteSpace">
                         <span class="input-group-btn">
                             <button class="btn btn-success" @click="addSlot" :disabled="!isAllowToAdd" :class="{ disabled : !isAllowToAdd }">
                                 <span class="glyphicon glyphicon-plus-sign"></span>
@@ -99,10 +99,14 @@ export default {
         }
     },
     methods: {
+        filterWhiteSpace() {
+            this.slotId = this.slotId.trim().replace(/\s*/gmi, "");
+        },
         addSlot() {
-            if ( this.slotId != "" ) {
+            let filteredSlotId = this.slotId.trim().replace(/\s*/gmi, "");
+            if ( filteredSlotId != "" ) {
                 this.slots.push({
-                    id: this.slotId,
+                    id: filteredSlotId,
                     components: []
                 });
                 this.slotId = "";
