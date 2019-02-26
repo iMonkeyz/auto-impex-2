@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p class="text-center">Auto ImpEx 2.0 by Jesse.zhou x iMonkeyz</p>
+        <p class="text-center">Auto ImpEx 2 by Jesse.zhou x iMonkeyz</p>
     </footer>
 </template>
 

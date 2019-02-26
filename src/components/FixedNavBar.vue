@@ -7,7 +7,7 @@
                     ><span class="glyphicon glyphicon-send"></span> 生成代码</button>
             </div>
             
-            <a class="navbar-brand">Auto ImpEx 2.0</a>
+            <a class="navbar-brand">Auto ImpEx 2</a>
             <ul class="nav navbar-nav">
                 <li>
                     <a href="#Section_PRD">Public Resources Definition</a>

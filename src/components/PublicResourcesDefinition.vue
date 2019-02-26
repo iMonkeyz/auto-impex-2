@@ -198,7 +198,7 @@ export default {
     },
     computed: {
         formattedScripts() {
-            let scripts = ["### Public Resources Definition Created By Auto ImpEx 2.0 ###"];
+            let scripts = ["### Public Resources Definition Created By Auto ImpEx 2 ###"];
             scripts = scripts.concat(this.formattedDefs);
             scripts = scripts.concat(this.formattedCatalogs);
             scripts = scripts.concat(this.formattedResources);
