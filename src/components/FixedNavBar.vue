@@ -4,7 +4,7 @@
             <div class="pull-right btn-auto-script">
                 <button type="button" class="btn btn-primary" 
                     data-toggle="modal" data-backdrop="static" data-target='#modalScripts' @click="autoScript"
-                    >生成代码</button>
+                    ><span class="glyphicon glyphicon-send"></span> 生成代码</button>
             </div>
             
             <a class="navbar-brand">Auto ImpEx 2.0</a>
