@@ -47,6 +47,17 @@
                         </span>
                     </p>
                 </div>
+                <div class="col-sm-12 text-right">
+                    <div class="btn-group btn-group-xs btn-remove-confirm">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-trash"></span>&nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);" @click="removePage(index)">确认删除该Page</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <hr/>
             <div class="row CMS-SLOTS-POSITIONS">
@@ -75,6 +86,9 @@ export default {
     props: {
         page: {
             type: Object, required: true
+        },
+        index: {
+            type: Number, required: true
         }
     },
     data() {
@@ -99,6 +113,9 @@ export default {
         }
     },
     methods: {
+        removePage(index) {
+            this.$emit("remove-page", index);
+        },
         filterWhiteSpace() {
             this.slotId = this.slotId.trim().replace(/\s*/gmi, "");
         },

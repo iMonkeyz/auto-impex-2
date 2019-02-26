@@ -11,7 +11,7 @@
         </div>
         <div class="panel-body">
             <div v-for="(page, index) in pages" :key="index">
-                <CmsPage ref="CmsPage" :page="page"/>
+                <CmsPage ref="CmsPage" :page="page" :index="index" @remove-page="removePage"/>
             </div>
         </div>
 
@@ -100,7 +100,7 @@ export default {
         },
         removePage(index) {
             this.pages = this.pages.filter((page, i) => {
-                return i !== this.index;
+                return i !== index;
             });
         },
         autoScript() {
