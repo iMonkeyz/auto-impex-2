@@ -52,7 +52,7 @@
                                 :key="index" :class="{ 'active': index == selectedComponentIndex }"
                                 @click="updateTabIndex(index)"
                                 >
-                                <a :href="'#' + (component.id || '未命名') + index" data-toggle="tab">{{ component.id || '未命名' }}</a>
+                                <a :href="'#' + (component.id || '未命名') + index" data-toggle="tab">{{ component.alias }}_{{ component.id || '未命名' }}</a>
                             </li>
                         </ul>
                         

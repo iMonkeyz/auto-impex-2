@@ -93,11 +93,15 @@ export default {
     },
     computed: {
         autoName() {
-            let auto = `${this.page.alias} Page ${this.component.id} ${this.component.alias} Component`;
+            let auto = `${this.component.id} ${this.component.alias} Component`;
+            if ( this.page.alias !== "" ) {
+                auto = `${this.page.alias} Page ${auto}`;
+            }
             return this.component.name === undefined || this.component.name === "" ? auto : this.component.name;
         },
         autoID() {
-            return `${this.page.alias}_${this.component.alias}_${this.component.id || ""}`;
+            let id = `${this.component.alias}_${this.component.id || ""}`;
+            return this.page.alias === "" ? id : `${this.page.alias}_${id}`;
         },
         idStatus() {
             return this.component.id === "" || this.component.id === undefined ? "无效" : this.isValidId ? "可用" : "冲突";

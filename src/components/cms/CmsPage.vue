@@ -8,7 +8,7 @@
                 <div class="col-md-6">
                     <p class="input-group input-group-sm">
                         <span class="input-group-addon">Page Name</span>
-                        <input type="text" class="form-control" placeholder="页面名称/描述" v-model="page.name">
+                        <input type="text" class="form-control" placeholder="页面名称/描述" v-model.trim="page.name">
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -20,19 +20,19 @@
                 <div class="col-md-6">
                     <p class="input-group input-group-sm">
                         <span class="input-group-addon">Page Template</span>
-                        <input type="text" class="form-control" placeholder="页面使用的模板ID" v-model="page.template">
+                        <input type="text" class="form-control" placeholder="页面使用的模板ID" v-model.trim="page.template">
                     </p>
                 </div>
                 <div class="col-md-6">
                     <p class="input-group input-group-sm">
                         <span class="input-group-addon">Page Label</span>
-                        <input type="text" class="form-control" placeholder="页面的Label URL" v-model="page.label">
+                        <input type="text" class="form-control" placeholder="页面的Label URL" v-model.trim="page.label">
                     </p>
                 </div>
                 <div class="col-md-6">
                     <p class="input-group input-group-sm">
                         <span class="input-group-addon">Page Alias</span>
-                        <input type="text" class="form-control" placeholder="页面缩写别名" v-model="page.alias">
+                        <input type="text" class="form-control" placeholder="页面缩写别名" v-model.trim="page.alias">
                         <span class="input-group-addon alias-tips text-success">*全局引用</span>
                     </p>
                 </div>
@@ -164,7 +164,6 @@ export default {
                 
                 let scriptObjs = [];
                 this.$refs["positions"].map(position => {
-                    console.log(position.autoCmsSlotId);
                     scriptObjs = scriptObjs.concat( position.autoScript() );
                 });
                 
