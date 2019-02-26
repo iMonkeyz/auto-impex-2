@@ -256,9 +256,9 @@ export default {
             this.$axios.put("/xpatch/impex/api/prd", {
                 type: prd.type, key: prd.key, value: prd.value, comments: prd.comments
             }).then(response => {
-
+                this.toasterSuccess("保存成功!");
             }).catch(error => {
-
+                this.toasterError(error);
             }).finally(_ => {
                 this.updateGlobalPRD();
             });
@@ -270,9 +270,10 @@ export default {
                 if ( response.data.status === "success" ) {
                     this.customs.push(JSON.parse(JSON.stringify(this.newPRD)));
                     this.resetNewPRD();
+                    this.toasterSuccess("保存成功!");
                 }
             }).catch(error => {
-
+                this.toasterError(error);
             }).finally(_ => {
                 this.updateGlobalPRD();
             }).finally(_ => {
@@ -290,9 +291,10 @@ export default {
             }).then(response => {
                 if ( response.data.status === "success" ) {
                     this.customs = this.customs.filter(custom => custom.key !== prd.key);
+                    this.toasterSuccess("删除成功!");
                 }
             }).catch(error => {
-
+                this.toasterError(error);
             }).finally(_ => {
                 this.updateGlobalPRD();
             });
@@ -307,6 +309,12 @@ export default {
             this.$prd.setResources(this.resources);
             this.$prd.setTranslators(this.translators);
             this.$prd.setCustoms(this.customs);
+        },
+        toasterSuccess(msg) {
+            $.toaster({message: msg, title: "PRD", priority: "success", timeout: 3000});
+        },
+        toasterError(error) {
+            $.toaster({message: error, title: "处理PRD异常", priority: "danger", timeout: 6000});
         }
     }
 }
