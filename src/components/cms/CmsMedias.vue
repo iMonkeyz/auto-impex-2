@@ -9,7 +9,7 @@
                     <div class="menu-icon text-center pull-right" @click="previewScript">
                         <span class="glyphicon glyphicon-tag"></span>
                     </div>
-                    <h3 class="panel-title">Media [{{ medias.length }}]</h3>
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-bookmark"></span> Media [{{ medias.length }}]</h3>
                 </div>
                 <div class="panel-body" id="MediaPanel">
 

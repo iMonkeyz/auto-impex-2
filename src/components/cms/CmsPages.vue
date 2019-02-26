@@ -7,7 +7,7 @@
             <div class="menu-icon text-center pull-right" @click="previewScript">
                 <span class="glyphicon glyphicon-tag"></span>
             </div>
-            <h3 class="panel-title">CMS Page [{{ this.pages.length }}]</h3>
+            <h3 class="panel-title"><span class="glyphicon glyphicon-bookmark"></span> CMS Page [{{ this.pages.length }}]</h3>
         </div>
         <div class="panel-body">
             <div v-for="(page, index) in pages" :key="index">

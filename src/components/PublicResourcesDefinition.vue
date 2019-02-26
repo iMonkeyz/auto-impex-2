@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-primary" id="Section_PRD">
         <div class="panel-heading">
-            <h3 class="panel-title">Public Resources Definition</h3>
+            <h3 class="panel-title"><span class="glyphicon glyphicon-bookmark"></span> Public Resources Definition</h3>
         </div>
         <div class="panel-body">
             

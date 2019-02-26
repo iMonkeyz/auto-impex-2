@@ -7,7 +7,7 @@
                     <div class="menu-icon text-center pull-right" @click="previewScript">
                         <span class="glyphicon glyphicon-tag"></span>
                     </div>
-                    <h3 class="panel-title">Config Parameter [{{ configs.length }}]</h3>
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-bookmark"></span> Config Parameter [{{ configs.length }}]</h3>
               </div>
               <div class="panel-body">
                     <ul v-if="configs.length > 0" class="list-group">
