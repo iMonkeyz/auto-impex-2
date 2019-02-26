@@ -62,7 +62,6 @@ export default {
                     scripts.push( template.autoScript() );
                 });
             }
-            console.log("templdates script", scripts);
             return new Array(scripts);
         },
         previewScript() {

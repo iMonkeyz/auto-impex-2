@@ -105,7 +105,6 @@ export default {
                     scripts.push(media.autoScript());
                 });
             }
-            console.log("Medias script:", scripts);
             return new Array(scripts);
         },
         previewScript() {
